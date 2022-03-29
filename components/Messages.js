@@ -9,7 +9,7 @@ const Messages = () => {
     const endOfMessagesRef = useRef(null);
     const MINS_DURATION = 15;
     const {data, loading, error} = useMoralisQuery(
-        'Messages',
+        "Messages",
         (query) => query.ascending('createdAt').greaterThan('createdAt', new Date(Date.now() - 1000 * 60 * MINS_DURATION)), [], {
             live: true,
         });
@@ -21,7 +21,7 @@ const Messages = () => {
             <div className="my-5">
                 <ByMoralis variant="dark" style={{marginLeft: 'auto', marginRight: 'auto'}} />
             </div>
-            <div className="">
+            <div className="space-y-10 p-4">
                 {data.map(message => (
                     <Message key={message.id} message={message} />
                 ))}

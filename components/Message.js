@@ -1,9 +1,10 @@
 import React from 'react';
+import {useMoralis} from 'react-moralis';
 
-const Message = () => {
+const Message = ({message}) => {
     return (
-        <div>
-            I am the message
+        <div className="">
+            <p>{message.get('message')}</p>
         </div>
     );
 };
