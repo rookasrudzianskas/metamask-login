@@ -1,7 +1,7 @@
 import React from 'react';
 import {useMoralis} from "react-moralis";
 
-const SendMessage = () => {
+const SendMessage = ({endOfMessagesRef}) => {
     const {user, Moralis } = useMoralis();
     const [message, setMessage] = React.useState('');
     const [error, setError] = React.useState('');
@@ -26,6 +26,8 @@ const SendMessage = () => {
         }).catch((error) => {
             console.log(error);
         });
+
+        endOfMessagesRef.current.scrollIntoView({behavior: 'smooth'});
     }
 
     return (
