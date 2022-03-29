@@ -12,7 +12,7 @@ const SendMessage = ({endOfMessagesRef}) => {
             return;
         }
 
-        const messageData = Moralis.object.extend("Messages");
+        const Messages = Moralis.Object.extend("Messages");
         const messages = new Messages();
 
         messages.save({
@@ -28,6 +28,7 @@ const SendMessage = ({endOfMessagesRef}) => {
         });
 
         endOfMessagesRef.current.scrollIntoView({behavior: 'smooth'});
+        setMessage('');
     }
 
     return (
