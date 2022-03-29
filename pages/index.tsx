@@ -22,7 +22,6 @@ const Home: NextPage = () => {
 
         <h1>Welcome to the app</h1>
         <button onClick={logout}>Logout from here ❤️</button>
-
     </div>
   )
 }
