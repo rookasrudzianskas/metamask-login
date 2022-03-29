@@ -2,6 +2,7 @@ import React from 'react';
 import {useMoralis} from "react-moralis";
 import Image from "next/image";
 import Avatar from "./Avatar";
+import ChangeUsername from "./ChangeUsername";
 
 const Header = () => {
     const {user} = useMoralis();
@@ -17,6 +18,8 @@ const Header = () => {
                 </div>
                 <h1 className="text-3xl ">Welcome to cloud METAVERSE</h1>
                 <h2 className="text-5xl font-bold truncate">{user.getUsername()}</h2>
+
+                <ChangeUsername />
             </div>
         </div>
     );
