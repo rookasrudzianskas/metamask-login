@@ -6,7 +6,7 @@ import { useMoralis } from "react-moralis";
 import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
-    const { authenticate, isAuthenticated, user } = useMoralis();
+    const { authenticate, isAuthenticated, user, logout } = useMoralis();
     if (!isAuthenticated) {
         return (
            <Login />
@@ -21,6 +21,7 @@ const Home: NextPage = () => {
       </Head>
 
         <h1>Welcome to the app</h1>
+        <button onClick={logout}>Logout from here ❤️</button>
 
     </div>
   )
