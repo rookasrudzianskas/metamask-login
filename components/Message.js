@@ -25,6 +25,7 @@ const Message = ({message}) => {
             <p className={`absolute -bottom-5 text-xs ${isUserMessage ? 'text-pink-300' : 'text-blue-400'}`}>
                 {message.get('username')}
             </p>
+        {/*    done */}
         </div>
     );
 };
