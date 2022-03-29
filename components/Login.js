@@ -1,10 +1,18 @@
 import React from 'react';
+import Image from "next/image";
 
 const Login = () => {
     return (
-        <div>
-            <h1>I am the login screen</h1>
+        <div className="bg-black relative text-white">
+            <div>
+            {/*    logo plus login button */}
+            </div>
+            <div>
+            {/*    the background */}
+                <Image />
+            </div>
         </div>
+
     );
 };
 
