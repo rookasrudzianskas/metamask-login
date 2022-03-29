@@ -12,6 +12,9 @@ const SendMessage = () => {
             return;
         }
 
+        const messageData = Moralis.object.extend("Messages");
+        const messages = new Messages();
+
 
     }
 
