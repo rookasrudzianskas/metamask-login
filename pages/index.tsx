@@ -25,7 +25,7 @@ const Home: NextPage = () => {
                 <Header />
 
             </div>
-        <button onClick={logout}>Logout from here ❤️</button>
+        {/*<button onClick={logout}>Logout from here ❤️</button>*/}
     </div>
   )
 }
