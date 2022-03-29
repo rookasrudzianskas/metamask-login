@@ -6,17 +6,10 @@ import SendMessage from "./SendMessage";
 const Messages = () => {
     const {user} = useMoralis();
     const endOfMessagesRef = useRef(null);
+    const MINS_DURATION = 15;
     const {data, loading, error} = useMoralisQuery(
         'Messages',
-        (query) => query.ascending('createdAt').limit(10),
-        {
-            onSuccess: (data) => {
-                if (data.length > 0) {
-                    endOfMessagesRef.current.scrollIntoView({behavior: 'smooth'});
-                }
-            }
-        }
-    )
+        (query) => query.ascending('createdAt').greaterThan('createdAt', new Date(Date.now() - 1000 * 60 * MINS_DURATION)));
 
     return (
         <div className="pb-56">
