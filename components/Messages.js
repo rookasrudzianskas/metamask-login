@@ -1,6 +1,7 @@
 import React, {useRef} from 'react';
 import {ByMoralis, useMoralis, useMoralisQuery} from 'react-moralis';
 import SendMessage from "./SendMessage";
+import Message from "./Message";
 
 
 const Messages = () => {
@@ -13,13 +14,17 @@ const Messages = () => {
             live: true,
         });
 
+    // console.log(data);
+
     return (
         <div className="pb-56">
             <div className="my-5">
                 <ByMoralis variant="dark" style={{marginLeft: 'auto', marginRight: 'auto'}} />
             </div>
             <div className="">
-            {/*    Message */}
+                {data.map(message => (
+                    <Message key={message.id} message={message} />
+                ))}
 
             </div>
             <div className="flex justify-center">
