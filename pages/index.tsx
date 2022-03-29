@@ -6,8 +6,12 @@ import { useMoralis } from "react-moralis";
 import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
-    const isAuthenticated = false;
-    if(!isAuthenticated) return <Login />;
+    const { authenticate, isAuthenticated, user } = useMoralis();
+    if (!isAuthenticated) {
+        return (
+           <Login />
+        );
+    }
 
   return (
     <div className="h-screen">
