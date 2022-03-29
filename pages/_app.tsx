@@ -3,8 +3,9 @@ import type { AppProps } from 'next/app'
 import { MoralisProvider } from "react-moralis";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (
-      <MoralisProvider appId="xxxxxxxx" serverUrl="xxxxxxxx">
+    return (
+  // @ts-ignore
+      <MoralisProvider appId={process.env.NEXT_PUBLIC_APP_ID} serverUrl={process.env.NEXT_PUBLIC_SERVER_URL} >
         <Component {...pageProps} />
       </MoralisProvider>
   )
