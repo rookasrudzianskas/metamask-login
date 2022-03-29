@@ -20,10 +20,11 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <h1>Welcome to the app</h1>
-        {/* Header */}
-        {/* Messages */}
-        {/* Footer */}
+        <div>
+            <div className="max-w-screen-2xl">
+
+            </div>
+        </div>
         <button onClick={logout}>Logout from here ❤️</button>
     </div>
   )
