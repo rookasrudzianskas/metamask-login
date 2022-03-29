@@ -5,6 +5,7 @@ import Login from '../components/Login';
 import { useMoralis } from "react-moralis";
 import { useRouter } from "next/router";
 import Header from '../components/Header';
+import Messages from '../components/Messages';
 
 const Home: NextPage = () => {
     const { authenticate, isAuthenticated, user, logout } = useMoralis();
