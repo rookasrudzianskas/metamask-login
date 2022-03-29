@@ -15,7 +15,17 @@ const SendMessage = () => {
         const messageData = Moralis.object.extend("Messages");
         const messages = new Messages();
 
+        messages.save({
+            message: message,
+            username: user.getUsername(),
+            ethAddress: user.get('ethAddress'),
 
+        }).then((message) => {
+            console.log(message);
+            setMessage('');
+        }).catch((error) => {
+            console.log(error);
+        });
     }
 
     return (
