@@ -3,7 +3,7 @@ import {ByMoralis, useMoralis, useMoralisQuery} from 'react-moralis';
 const Messages = () => {
     return (
         <div className="pb-56">
-            <div>
+            <div className="my-5">
                 <ByMoralis variant="dark" style={{marginLeft: 'auto', marginRight: 'auto'}} />
             </div>
         </div>
