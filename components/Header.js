@@ -9,11 +9,11 @@ const Header = () => {
 
     return (
         <div className="text-pink-500">
-            <div className="">
+            <div className="grid grid-cols-5 lg:grid-cols-6 items-end lg:items-center">
                 <div className="relative h-24 w-24 mx-auto hidden lg:inline-grid">
                     <Image className="rounded-full object-cover" layout="fill" src="https://yt3.ggpht.com/-CDERLAq3BNY7murpWzg3z9Qde3c9ZrRx59LlLEb1UzKDKZ_ckpTAOlYVQ5TJo9XTgJl2kh9bw=s900-c-k-c0x00ffffff-no-rj" />
                 </div>
-                <div className="text-left lg:text-center">
+                <div className="text-left lg:text-center col-span-4">
                     <div className="h-48 w-48 relative lg:mx-auto border-pink-500 border-8 rounded-full">
                         <Avatar logoutOnPress={true} />
                     </div>
