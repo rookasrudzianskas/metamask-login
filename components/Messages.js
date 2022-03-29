@@ -1,9 +1,22 @@
 import React, {useRef} from 'react';
 import {ByMoralis, useMoralis, useMoralisQuery} from 'react-moralis';
 import SendMessage from "./SendMessage";
+
+
 const Messages = () => {
     const {user} = useMoralis();
     const endOfMessagesRef = useRef(null);
+    const {data, loading, error} = useMoralisQuery(
+        'Messages',
+        (query) => query.ascending('createdAt').limit(10),
+        {
+            onSuccess: (data) => {
+                if (data.length > 0) {
+                    endOfMessagesRef.current.scrollIntoView({behavior: 'smooth'});
+                }
+            }
+        }
+    )
 
     return (
         <div className="pb-56">
