@@ -5,7 +5,16 @@ const ChangeUsername = () => {
     const {setUserData, isUserUpdating, userError, user} = useMoralis();
 
     const setUserName = () => {
-        const username = prompt("Enter your new username");
+        const username = prompt(`Enter your new username (current: ${user.getUsername()})`);
+        if(!username) return;
+
+        setUserData({
+            username,
+        }).then(r => {
+            if(r.error) {
+                alert(r.error);
+            }
+        });
     }
     return (
         <div className="text-sm absolute top-5 right-5">
