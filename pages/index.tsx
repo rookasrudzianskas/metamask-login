@@ -10,6 +10,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+        <h1>Welcome to the Metaverse world 🚀</h1>
+
     </div>
   )
 }
