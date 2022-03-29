@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       </Head>
 
         <div>
-            <div className="max-w-screen-2xl">
+            <div className="max-w-screen-2xl mx-auto">
 
             </div>
         </div>
