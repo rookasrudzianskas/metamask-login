@@ -7,9 +7,11 @@ const Login = () => {
             <div>
             {/*    logo plus login button */}
             </div>
-            <div>
+            <div className="w-full h-screen">
             {/*    the background */}
-                <Image />
+                <Image src="https://links.papareact.com/55n"
+                    layout="fill" objectFit="cover"
+                />
             </div>
         </div>
 
