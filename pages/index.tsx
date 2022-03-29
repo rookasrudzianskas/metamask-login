@@ -23,6 +23,7 @@ const Home: NextPage = () => {
 
             <div className="max-w-screen-2xl mx-auto">
                 <Header />
+                <Messages />
 
             </div>
         {/*<button onClick={logout}>Logout from here ❤️</button>*/}
